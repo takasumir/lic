@@ -1,0 +1,26 @@
+type Props = {
+  image: string;
+  alt: string;
+  title: string;
+  description: string;
+};
+
+export function Linkcard(props: Props) {
+  return (
+    <div class="flex items-center p-4 my-6 gap-x-4 bg-white shadow-sm border border-slate-200 rounded-lg w-96">
+    <img
+      src={props.image}
+      alt={props.alt}
+      loading="lazy"
+      class="relative inline-block h-16 w-16 rounded-full object-cover object-center"
+    />
+      <div>
+        <h6 class="text-slate-800 font-semibold">
+          {props.title}
+        </h6>
+        <p class="mx-auto my-4">
+          {props.description}
+        </p>
+    </div>
+  );
+}

@@ -1,0 +1,20 @@
+import { PageProps } from "$fresh/server.ts";
+import { useSignal } from "@preact/signals";
+import Navbar from "../islands/Navbar.tsx";
+
+export default function Layout({ Component, state }: PageProps) {
+  const visible = useSignal(false);
+  return (
+    <>
+      <head>
+        <meta name="author" content="Sumic" />
+      </head>
+      <body>
+        <Component />
+        <footer className="max-w-screen-md mx-4 md:mx-auto text-center">
+          Copyright © 2025 Sumic All Rights Reserved.
+        </footer>
+      </body>
+    </>
+  );
+}

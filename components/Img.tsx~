@@ -1,0 +1,13 @@
+type Props = {
+  src: string;
+  alt: string;
+};
+
+export function Img(src: Props){
+let [stem, ext] = src.split(".");
+let sizes = ["640", "960", "1280"];
+let fname = sizes.map( x => { stem + x + "." + ext + ", " + x + "w" } );
+
+return(
+  <img srcset="{fname}" src="src" alt="{alt}"/>
+);
