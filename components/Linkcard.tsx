@@ -17,7 +17,7 @@ export function Linkcard(props: Props) {
           class="relative inline-block h-24 w-24 rounded-full object-cover object-center"
         />
         <div>
-          <h6 class="text-bold text-slate-800 font-semibold line-clamp-2">
+          <h6 class="font-bold text-slate-800 font-semibold line-clamp-2">
             {props.title}
           </h6>
           <p class="mx-auto mt-2 line-clamp-2">{props.description}</p>
