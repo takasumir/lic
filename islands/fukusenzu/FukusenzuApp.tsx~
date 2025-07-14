@@ -1,0 +1,59 @@
+"use strict";
+import { useState, useEffect } from "preact/hooks";
+import { init } from "./functions.js";
+
+function nextExamno(examno) {
+  return examno >= 13 ? 1 : ++examno;
+}
+function prevExamno(examno) {
+  return examno <= 1 ? 13 : --examno;
+}
+
+export function FukusenzuApp(props) {
+  // const [examno, setExamno] = useState(props.examno);
+
+  useEffect(() => {
+    init(
+      document.getElementById("0").getContext("2d"),
+      document.getElementById("1").getContext("2d"),
+      props.examno,
+    );
+  }, []);
+
+  return (
+    <>
+      <h1
+        onClick={() => {
+          setExamno(examno - 1);
+        }}
+      >
+        Canvas App # {props.examno}!
+      </h1>
+      <canvas
+        id="0"
+        style="width:100%; max-width:600px"
+        width="1200"
+        height="800"
+        onClick={() => {
+          // if (examno < 13) {
+          //   setExamno(examno + 1);
+          // } else {
+          //   setExamno(1);
+          // }
+        }}
+      ></canvas>
+      <canvas
+        id="1"
+        style="width:100%; max-width:600px"
+        width="1200"
+        height="800"
+      ></canvas>
+      <a href={prevExamno(props.examno)}>
+        前の問題 No.{prevExamno(props.examno)}
+      </a>
+      <a href={nextExamno(props.examno)}>
+        次の問題 No.{nextExamno(props.examno)}
+      </a>
+    </>
+  );
+}

@@ -9,6 +9,8 @@ import * as $about from "./routes/about.tsx";
 import * as $api_joke from "./routes/api/joke.ts";
 import * as $electrician_2_layout from "./routes/electrician-2/_layout.tsx";
 import * as $electrician_2_examday_index from "./routes/electrician-2/examday/index.tsx";
+import * as $electrician_2_fukusenzu_examno_ from "./routes/electrician-2/fukusenzu/[examno].tsx";
+import * as $electrician_2_fukusenzu_index from "./routes/electrician-2/fukusenzu/index.tsx";
 import * as $electrician_2_index from "./routes/electrician-2/index.tsx";
 import * as $electrician_2_practicalexam_index from "./routes/electrician-2/practicalexam/index.tsx";
 import * as $electrician_2_vvfstripper_index from "./routes/electrician-2/vvfstripper/index.tsx";
@@ -18,6 +20,12 @@ import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
 import * as $Counter from "./islands/Counter.tsx";
 import * as $Navbar from "./islands/Navbar.tsx";
+import * as $fukusenzu_FukusenzuApp from "./islands/fukusenzu/FukusenzuApp.tsx";
+import * as $fukusenzu_class from "./islands/fukusenzu/class.js";
+import * as $fukusenzu_data from "./islands/fukusenzu/data.js";
+import * as $fukusenzu_functions from "./islands/fukusenzu/functions.js";
+import * as $fukusenzu_mondai_1 from "./islands/fukusenzu/mondai_1.tsx";
+import * as $fukusenzu_sprite from "./islands/fukusenzu/sprite.js";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -29,6 +37,10 @@ const manifest = {
     "./routes/api/joke.ts": $api_joke,
     "./routes/electrician-2/_layout.tsx": $electrician_2_layout,
     "./routes/electrician-2/examday/index.tsx": $electrician_2_examday_index,
+    "./routes/electrician-2/fukusenzu/[examno].tsx":
+      $electrician_2_fukusenzu_examno_,
+    "./routes/electrician-2/fukusenzu/index.tsx":
+      $electrician_2_fukusenzu_index,
     "./routes/electrician-2/index.tsx": $electrician_2_index,
     "./routes/electrician-2/practicalexam/index.tsx":
       $electrician_2_practicalexam_index,
@@ -43,6 +55,12 @@ const manifest = {
   islands: {
     "./islands/Counter.tsx": $Counter,
     "./islands/Navbar.tsx": $Navbar,
+    "./islands/fukusenzu/FukusenzuApp.tsx": $fukusenzu_FukusenzuApp,
+    "./islands/fukusenzu/class.js": $fukusenzu_class,
+    "./islands/fukusenzu/data.js": $fukusenzu_data,
+    "./islands/fukusenzu/functions.js": $fukusenzu_functions,
+    "./islands/fukusenzu/mondai_1.tsx": $fukusenzu_mondai_1,
+    "./islands/fukusenzu/sprite.js": $fukusenzu_sprite,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

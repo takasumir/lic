@@ -44,9 +44,9 @@ export default function AboutPage() {
             height="1024"
           />
           <div class="p-5">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+            <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
               Sumic
-            </h5>
+            </h3>
             <p class="mb-3 font-normal text-gray-700">
               技術者として働いています。第二種電気工事士、機械・プラント製図
               機械製図CAD作業1級

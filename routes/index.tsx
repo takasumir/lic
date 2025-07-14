@@ -45,9 +45,9 @@ export default function Home() {
           </a>
           <div class="p-5">
             <a href="#">
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+              <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
                 第二種電気工事士 試験情報
-              </h5>
+              </h2>
             </a>
             <p class="mb-3 font-normal text-gray-700">
               第二種電気工事士の資格取得に関する情報をまとめました。試験日程、勉強のやり方、おすすめの工具、複線図の作成方法などお役立ち情報満載です！
@@ -56,7 +56,7 @@ export default function Home() {
               href="electrician-2"
               class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
             >
-              Read more
+              第二種電気工事士
               <svg
                 class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                 aria-hidden="true"
@@ -87,9 +87,9 @@ export default function Home() {
           </a>
           <div class="p-5">
             <a href="#">
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+              <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-600">
                 機械製図・プラント製図 機械製図CAD作業２級
-              </h5>
+              </h2>
             </a>
             <p class="mb-3 font-normal text-gray-700">
               機械製図・プラント製図
@@ -97,7 +97,7 @@ export default function Home() {
             </p>
             <a
               href="#"
-              class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-300 rounded-lg"
+              class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-400 rounded-lg"
             >
               Coming Soon...
               <svg
@@ -130,9 +130,9 @@ export default function Home() {
           </a>
           <div class="p-5">
             <a href="#">
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+              <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
                 機械製図・プラント製図 機械製図CAD作業１級
-              </h5>
+              </h2>
             </a>
             <p class="mb-3 font-normal text-gray-700">
               機械製図・プラント製図
@@ -140,7 +140,7 @@ export default function Home() {
             </p>
             <a
               href="#"
-              class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-300 rounded-lg"
+              class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-400 rounded-lg"
             >
               Coming Soon...
               <svg

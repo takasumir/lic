@@ -1,0 +1,42 @@
+import { PageProps } from "$fresh/server.ts";
+import { Head } from "$fresh/runtime.ts";
+import { FukusenzuApp } from "../../../islands/fukusenzu/FukusenzuApp.tsx";
+
+export default function Fukusenzu(props: PageProps) {
+  return (
+    <>
+      <Head>
+        <title>
+          第二種電気工事士 複線図の描き方 - 候補問題No.{props.params.examno}
+        </title>
+        <meta
+          name="description"
+          content="第二種電気工事士技能試験の候補問題No.{props.params.examno}を題材として、}単線図から複線図を作成する方法を解説します。"
+        />
+      </Head>
+      <header className="px-4 pt-16 pb-8 mx-auto bg-[#86efac]">
+        <div className="max-w-screen-md mx-auto flex flex-col items-center justify-center">
+          <img
+            className="my-6"
+            src="/electrician-2/circuit.webp"
+            width="1280"
+            height="854"
+            alt="回路図のイラスト"
+          />
+          <h1 className="text-4xl font-bold">
+            第二種電気工事士
+            <br />
+            複線図 候補問題No.{props.params.examno} の解説
+          </h1>
+        </div>
+      </header>
+      <main className="max-w-screen-md mx-4 md:mx-auto py-6">
+        <p className="mb-4">
+          第二種電気工事士技能試験の候補問題No.{props.params.examno}
+          の単線図から複線図を作成する方法を解説します。
+        </p>
+        <FukusenzuApp examno={parseInt(props.params.examno)} />
+      </main>
+    </>
+  );
+}

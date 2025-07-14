@@ -1,0 +1,373 @@
+"use strict";
+// Sprite objects
+// import _ from 'lodash';
+import {
+  Sprite,
+  linePainter,
+  lineBehavior,
+  timeBehavior,
+  dotPainter,
+  dotBehavior,
+} from "./class.js";
+import * as f from "./functions.js";
+import { diagramData } from "./data.js";
+//import { startTime } from "./Fukusenzu.tsx";
+export let mLine = [],
+  pLine1 = [],
+  pLine2 = [],
+  exLine = [],
+  exLine2 = [];
+let spset = [];
+
+const lineCoords = [];
+
+export function genLinesSp(lines) {
+  return lines.map((v) => {
+    if (v[1] === "l") {
+      const line = new Sprite(v[1], linePainter, [lineBehavior]);
+      Object.assign(line, { x1: v[2], y1: v[3], x2: v[4], y2: v[5] });
+      if (v.length > 6) {
+        line.strokeStyle = v[6];
+      }
+      if (v.length > 7) {
+        line.or_strokeStyle = v[7];
+      }
+      return line;
+    } else if (v[1] === "d") {
+      const dot = new Sprite(v[1], dotPainter, [dotBehavior]);
+      Object.assign(dot, { x1: v[2], y1: v[3], r: v[4] });
+      if (v.length > 5) {
+        dot.strokeStyle = v[5];
+        dot.fillStyle = v[5];
+      }
+      return dot;
+    }
+  });
+}
+
+export const recep = new Sprite(
+  "Receptacle",
+  {
+    paint: function (sprite, context) {
+      drawRecep(context, 500, 50, instWidth, "ロ");
+    },
+  },
+  [timeBehavior],
+);
+export const sup = new Sprite(
+  "Power supply",
+  {
+    paint: function (sprite, context) {
+      drawSup(context, 100, 150, instWidth, -Math.PI / 2);
+    },
+  },
+  [timeBehavior],
+);
+export const ol = new Sprite(
+  "Outlet",
+  {
+    paint: function (sprite, context) {
+      drawOutlet(context, 300, 350, instWidth);
+    },
+  },
+  [timeBehavior],
+);
+export const sw_i = new Sprite(
+  "Switch i",
+  {
+    paint: function (sprite, context) {
+      drawHSwitch(context, 280, 260, instWidth, "Ｈイ");
+    },
+  },
+  [timeBehavior],
+);
+export const sw_ro = new Sprite(
+  "Switch ro",
+  {
+    paint: function (sprite, context) {
+      drawSwitch(context, 280, 300, instWidth, "ロ");
+    },
+  },
+  [timeBehavior],
+);
+export const sw_ha = new Sprite(
+  "Switch ro",
+  {
+    paint: function (sprite, context) {
+      drawSwitch(context, 280, 340, instWidth, "ハ");
+    },
+  },
+  [timeBehavior],
+);
+export const hikkake = new Sprite(
+  "Hikkake",
+  {
+    paint: function (sprite, context) {
+      drawHikkake(context, 300, 50, instWidth, "イ");
+    },
+  },
+  [timeBehavior],
+);
+export const earth = new Sprite(
+  "Earth",
+  {
+    paint: function (sprite, context) {
+      drawEarth(context, 500, 330, instWidth, "ED");
+      context.save();
+      context.setLineDash([15, 3, 3, 3]);
+      context.moveTo(420, 360);
+      context.lineTo(420, 300);
+      context.lineTo(580, 300);
+      context.lineTo(580, 360);
+      context.stroke();
+      context.font = Math.round(instWidth * 0.4) + "px sans-serif";
+      context.fillStyle = "#222";
+      context.fillText("施工省略", 510, 320);
+      context.restore();
+    },
+  },
+  [timeBehavior],
+);
+export const box1 = new Sprite(
+  "Box1",
+  {
+    paint: function (sprite, context) {
+      drawBox(context, 300, 150, instWidth * 2.1, instWidth * 1.6);
+    },
+  },
+  [timeBehavior],
+);
+export const box2 = new Sprite(
+  "Box2",
+  {
+    paint: function (sprite, context) {
+      drawBox(context, 500, 150, instWidth * 1.6, instWidth * 1.6);
+    },
+  },
+  [timeBehavior],
+);
+export const breaker = new Sprite(
+  "Breaker",
+  {
+    paint: function (sprite, context) {
+      drawRect(context, 100, 160, instWidth * 1.4, "B");
+    },
+  },
+  [timeBehavior],
+);
+export const pilot = new Sprite(
+  "Pilot lamp",
+  {
+    paint: function (sprite, context) {
+      drawDot(context, 300, 250, instWidth * 0.4, "イ");
+    },
+  },
+  [timeBehavior],
+);
+export const flamp = new Sprite(
+  "Flourescent lamp",
+  {
+    paint: function (sprite, context) {
+      drawFLamp(context, 500, 340, instWidth, "ハ");
+    },
+  },
+  [timeBehavior],
+);
+for (let v of lineCoords) {
+  let sp = null;
+  if (0b00001 & v[0]) {
+    switch (v[1]) {
+      case "l":
+        sp = new Sprite("Minus Line", linePainter, [lineBehavior]);
+        sp.x1 = v[2];
+        sp.y1 = v[3];
+        sp.x2 = v[4];
+        sp.y2 = v[5];
+        sp.strokeStyle = "#22f";
+        mLine.push(sp);
+        break;
+      case "d":
+        sp = new Sprite("Minus Dot", dotPainter, [dotBehavior]);
+        sp.x1 = v[2];
+        sp.y1 = v[3];
+        sp.r = v[4];
+        sp.strokeStyle = "#22f";
+        sp.fillStyle = "#22f";
+        mLine.push(sp);
+        break;
+    }
+  }
+  if (0b00010 & v[0]) {
+    switch (v[1]) {
+      case "l":
+        sp = new Sprite("Plus Line1", linePainter, [lineBehavior]);
+        sp.x1 = v[2];
+        sp.y1 = v[3];
+        sp.x2 = v[4];
+        sp.y2 = v[5];
+        if (v.length > 6) {
+          sp.strokeStyle = v[6];
+        }
+        if (v.length > 7) {
+          sp.or_strokeStyle = v[7];
+          sp.override = true;
+        }
+        pLine1.push(sp);
+        break;
+      case "d":
+        sp = new Sprite("Plus Dot1", dotPainter, [dotBehavior]);
+        sp.x1 = v[2];
+        sp.y1 = v[3];
+        sp.r = v[4];
+        sp.fillStyle = "#222";
+        if (v.length > 5) {
+          sp.fillStyle = v[5];
+          sp.strokeStyle = v[5];
+        }
+        if (v.length > 6) {
+          sp.or_strokeStyle = v[6];
+          sp.or_fillStyle = v[6];
+          sp.override = true;
+        }
+        pLine1.push(sp);
+        break;
+    }
+  }
+  if (0b00100 & v[0]) {
+    switch (v[1]) {
+      case "l":
+        sp = new Sprite("Plus Line2", linePainter, [lineBehavior]);
+        sp.x1 = v[2];
+        sp.y1 = v[3];
+        sp.x2 = v[4];
+        sp.y2 = v[5];
+        if (v.length > 6) {
+          sp.strokeStyle = v[6];
+        }
+        if (v.length > 7) {
+          sp.or_strokeStyle = v[7];
+          sp.override = true;
+        }
+        pLine2.push(sp);
+        break;
+      case "d":
+        sp = new Sprite("Plus Dot2", dotPainter, [dotBehavior]);
+        sp.x1 = v[2];
+        sp.y1 = v[3];
+        sp.r = v[4];
+        sp.fillStyle = "#222";
+        if (v.length > 5) {
+          sp.fillStyle = v[5];
+          sp.strokeStyle = v[5];
+        }
+        if (v.length > 6) {
+          sp.or_strokeStyle = v[6];
+          sp.or_fillStyle = v[6];
+          sp.override = true;
+        }
+        pLine2.push(sp);
+        break;
+    }
+  }
+  if (0b01000 & v[0]) {
+    switch (v[1]) {
+      case "l":
+        sp = new Sprite("Extra Line1", linePainter, [lineBehavior]);
+        sp.x1 = v[2];
+        sp.y1 = v[3];
+        sp.x2 = v[4];
+        sp.y2 = v[5];
+        if (v.length > 6) {
+          sp.strokeStyle = v[6];
+        }
+        if (v.length > 7) {
+          sp.or_strokeStyle = v[7];
+          sp.override = true;
+        }
+        exLine.push(sp);
+        break;
+      case "d":
+        sp = new Sprite("Extra Dot1", dotPainter, [dotBehavior]);
+        sp.x1 = v[2];
+        sp.y1 = v[3];
+        sp.r = v[4];
+        if (v.length > 5) {
+          sp.fillStyle = v[5];
+          sp.strokeStyle = v[5];
+        }
+        if (v.length > 6) {
+          sp.or_strokeStyle = v[6];
+          sp.or_fillStyle = v[6];
+          sp.override = true;
+        }
+        exLine.push(sp);
+        break;
+    }
+  }
+  if (0b10000 & v[0]) {
+    switch (v[1]) {
+      case "l":
+        sp = new Sprite("Extra Line2", linePainter, [lineBehavior]);
+        sp.x1 = v[2];
+        sp.y1 = v[3];
+        sp.x2 = v[4];
+        sp.y2 = v[5];
+        if (v.length > 6) {
+          sp.strokeStyle = v[6];
+        }
+        exLine2.push(sp);
+        break;
+      case "d":
+        sp = new Sprite("Extra Dot2", dotPainter, [dotBehavior]);
+        sp.x1 = v[2];
+        sp.y1 = v[3];
+        sp.r = v[4];
+        sp.fillStyle = "#222";
+        if (v.length > 5) {
+          sp.fillStyle = v[5];
+          sp.strokeStyle = v[5];
+        }
+        exLine2.push(sp);
+        break;
+    }
+  }
+}
+const extra = new Sprite(
+  "Extra Info",
+  {
+    paint: function (sprite, context) {
+      drawExtraInfo(context);
+    },
+  },
+  [
+    {
+      execute: function (sprite, context, time) {
+        sprite.visible = true;
+        sprite.animating = false;
+      },
+    },
+  ],
+);
+export let insts = [sup, hikkake, recep, flamp, sw_i, sw_ro, sw_ha, box1, box2];
+spset = [insts, insts, mLine, pLine1, pLine2, /*exLine,*/ [extra]];
+for (let sp of spset) {
+  sp.push(
+    new Sprite(
+      "Waiting sprite",
+      {
+        paint: function () {},
+      },
+      [
+        {
+          execute: function (sprite, context, time) {
+            sprite.t++;
+            if (sprite.t > 300) {
+              sprite.animating = false;
+            }
+          },
+        },
+      ],
+    ),
+  );
+}
+export const spritesSet = spset;
