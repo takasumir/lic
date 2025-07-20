@@ -88,6 +88,13 @@ export default function Fukusenzu() {
           title="候補問題No.3"
           description="候補問題No.3はタイムスイッチがポイントです。タイムスイッチの内部結成図を読み取り、複線図を作成する方法を解説します。"
         />
+        <Linkcard
+          url="./fukusenzu/4"
+          image="/electrician-2/circuit.webp"
+          alt="候補問題No.4の解説"
+          title="候補問題No.4"
+          description="三相200Vの電源がある候補問題No.4は一見難しそうですが、実は単純な問題です。"
+        />
       </main>
     </>
   );

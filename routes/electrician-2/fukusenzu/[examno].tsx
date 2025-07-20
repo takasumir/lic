@@ -4,10 +4,10 @@ import { Head } from "$fresh/runtime.ts";
 import { FukusenzuApp } from "../../../islands/fukusenzu/FukusenzuApp.tsx";
 
 function nextExamno(examno) {
-  return examno >= 3 ? 1 : ++examno;
+  return examno >= 4 ? 1 : ++examno;
 }
 function prevExamno(examno) {
-  return examno <= 1 ? 3 : --examno;
+  return examno <= 1 ? 4 : --examno;
 }
 
 export default async function Fukusenzu(req: Request, ctx: RouteContext) {
