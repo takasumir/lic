@@ -21,10 +21,12 @@ import * as $index from "./routes/index.tsx";
 import * as $Counter from "./islands/Counter.tsx";
 import * as $Navbar from "./islands/Navbar.tsx";
 import * as $fukusenzu_FukusenzuApp from "./islands/fukusenzu/FukusenzuApp.tsx";
+import * as $fukusenzu_Mondai_1 from "./islands/fukusenzu/Mondai_1.tsx";
+import * as $fukusenzu_Mondai_2 from "./islands/fukusenzu/Mondai_2.tsx";
+import * as $fukusenzu_Mondai_3 from "./islands/fukusenzu/Mondai_3.tsx";
 import * as $fukusenzu_class from "./islands/fukusenzu/class.js";
 import * as $fukusenzu_data from "./islands/fukusenzu/data.js";
 import * as $fukusenzu_functions from "./islands/fukusenzu/functions.js";
-import * as $fukusenzu_mondai_1 from "./islands/fukusenzu/mondai_1.tsx";
 import * as $fukusenzu_sprite from "./islands/fukusenzu/sprite.js";
 import type { Manifest } from "$fresh/server.ts";
 
@@ -56,10 +58,12 @@ const manifest = {
     "./islands/Counter.tsx": $Counter,
     "./islands/Navbar.tsx": $Navbar,
     "./islands/fukusenzu/FukusenzuApp.tsx": $fukusenzu_FukusenzuApp,
+    "./islands/fukusenzu/Mondai_1.tsx": $fukusenzu_Mondai_1,
+    "./islands/fukusenzu/Mondai_2.tsx": $fukusenzu_Mondai_2,
+    "./islands/fukusenzu/Mondai_3.tsx": $fukusenzu_Mondai_3,
     "./islands/fukusenzu/class.js": $fukusenzu_class,
     "./islands/fukusenzu/data.js": $fukusenzu_data,
     "./islands/fukusenzu/functions.js": $fukusenzu_functions,
-    "./islands/fukusenzu/mondai_1.tsx": $fukusenzu_mondai_1,
     "./islands/fukusenzu/sprite.js": $fukusenzu_sprite,
   },
   baseUrl: import.meta.url,

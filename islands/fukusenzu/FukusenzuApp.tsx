@@ -1,24 +1,21 @@
 "use strict";
+import { render } from "preact";
 import { useState, useRef, useEffect } from "preact/hooks";
 import { init } from "./functions.js";
-import { Mondai_1, Kaisetsu_1 } from "./mondai_1.tsx";
-
-function nextExamno(examno) {
-  return examno >= 13 ? 1 : ++examno;
-}
-function prevExamno(examno) {
-  return examno <= 1 ? 13 : --examno;
-}
 
 export function FukusenzuApp(props) {
-  const [step, setStep] = useState(0);
   const canvas0 = useRef(null);
   const canvas1 = useRef(null);
+  const fukusenzudiv = useRef(null);
+  const [mondai, setMondai] = useState(null);
+  const [kaisetsu, setKaisetsu] = useState(null);
+  const [kaisetsuL, setKaisetsuL] = useState(0);
 
+  const [step, setStep] = useState(0);
   const nextStep = () => {
     if (step === 0) {
       setStep(step + 1);
-    } else {
+    } else if (step < kaisetsuL) {
       setStep(step << 1);
     }
   };
@@ -29,7 +26,22 @@ export function FukusenzuApp(props) {
   };
 
   useEffect(() => {
-    console.log("use effect called.");
+    (async () => {
+      const { Mondai, Kaisetsu, kaisetsuLength } = await import(
+        `./Mondai_${props.examno}.tsx`,
+        {
+          with: {
+            type: "tsx",
+          },
+        }
+      );
+      setKaisetsuL(kaisetsuLength);
+      setMondai(<Mondai />);
+      setKaisetsu(
+        <Kaisetsu step={step} prevStep={prevStep} nextStep={nextStep} />,
+      );
+    })();
+
     init(
       canvas0.current.getContext("2d"),
       canvas1.current.getContext("2d"),
@@ -39,20 +51,26 @@ export function FukusenzuApp(props) {
   }, [step]);
 
   return (
-    <>
-      <h2 class="font-bold text-2xl mb-4">候補問題No.{props.examno}の単線図</h2>
+    <div key="fukusenzuapp" id="fukusenzuapp" ref={fukusenzudiv}>
+      <h2 key="sld.h2" class="font-bold text-2xl mb-4">
+        候補問題No.{props.examno}の単線図
+      </h2>
       <canvas
+        key="sld.cvs"
         id="0"
         ref={canvas0}
         style="width:100%; max-width:600px"
         width="1200"
         height="800"
       ></canvas>
-      <h2 class="font-bold text-2xl mb-4">
+      <div id="mondai" class="min-h-40">
+        {mondai}
+      </div>
+      <h2 key="mld.h2" class="font-bold text-2xl mb-4">
         候補問題No.{props.examno}の複線図作成方法解説
       </h2>
-      <Mondai_1 />
       <canvas
+        key="mld.cvs"
         id="1"
         ref={canvas1}
         style="width:100%; max-width:600px"
@@ -60,12 +78,12 @@ export function FukusenzuApp(props) {
         height="800"
         onClick={nextStep}
       ></canvas>
-      <Kaisetsu_1 step={step} prevStep={prevStep} nextStep={nextStep} />
-
-      {/*
-      <div class="flex justify-center">
-        <a
-          href={nextExamno(props.examno)}
+      <div id="kaisetsu" class="min-h-60">
+        {kaisetsu}
+      </div>
+      <div key="prevnextstep" class="flex justify-end">
+        <button
+          onClick={prevStep}
           class="rounded-md border border-transparent py-2 px-4 flex items-center text-center text-sm transition-all text-slate-600 hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
           type="button"
         >
@@ -83,14 +101,14 @@ export function FukusenzuApp(props) {
               clip-rule="evenodd"
             />
           </svg>
-          前の問題 No.{prevExamno(props.examno)}
-        </a>
-        <a
-          href={nextExamno(props.examno)}
+          前へ
+        </button>
+        <button
+          onClick={nextStep}
           class="rounded-md border border-transparent py-2 px-4 flex items-center text-center text-sm transition-all text-slate-600 hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
           type="button"
         >
-          次の問題 No.{nextExamno(props.examno)}
+          次へ
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -105,9 +123,8 @@ export function FukusenzuApp(props) {
               clip-rule="evenodd"
             />
           </svg>
-        </a>
+        </button>
       </div>
-        */}
-    </>
+    </div>
   );
 }

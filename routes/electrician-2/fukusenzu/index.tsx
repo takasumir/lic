@@ -74,6 +74,20 @@ export default function Fukusenzu() {
           title="候補問題No.1"
           description="第二種電気工事士技能試験の候補問題No.1の単線図から複線図を作成する方法を解説します。"
         />
+        <Linkcard
+          url="./fukusenzu/2"
+          image="/electrician-2/circuit.webp"
+          alt="候補問題No.2の解説"
+          title="候補問題No.2"
+          description="候補問題No.2の単線図から複線図を作成する方法を解説します。パイロットランプがありますが、常時点灯なので比較的簡単な問題です。"
+        />
+        <Linkcard
+          url="./fukusenzu/3"
+          image="/electrician-2/circuit.webp"
+          alt="候補問題No.3の解説"
+          title="候補問題No.3"
+          description="候補問題No.3はタイムスイッチがポイントです。タイムスイッチの内部結成図を読み取り、複線図を作成する方法を解説します。"
+        />
       </main>
     </>
   );

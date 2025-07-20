@@ -71,6 +71,7 @@
       ]
     }
   },
+
   {
     "ASIN": "B079JG1MD1",
     "DetailPageURL": "https://www.amazon.co.jp/dp/B079JG1MD1?tag=takasumir-22&linkCode=ogi&th=1&psc=1",
@@ -93,17 +94,11 @@
     "Offers": {
       "Listings": [
         {
-          "Id": "%2Bzzo7P1gcbaebXhuiYffbKtWBqyNvaXsM6iv%2BtQJGcw5wIRdBC40%2B9wQNqvtU5sa5Lc%2Fp1N2s0DQ3ODPAZbChSCwBWygGCk8AjucYIvC%2BC%2FgozAl%2Bb796uIIXjvNFDj4Uxjdkt58YdQ%3D",
+          "Id": "sibTHrljEdga0Cf1qD5xZNWmQKgVcqX%2FW67DTkZ2OAsNJi5c1%2BCJyTWaLLoxMqOMZpxDVQxsmgUFS6bt2Btv6ooMShX1MnBD2Nlw8OUY0%2B3ZvsX0p0NEiidNEqNbUWx1s%2FiJmlP%2BasY%3D",
           "Price": {
             "Amount": 19247,
             "Currency": "JPY",
-            "DisplayAmount": "￥19,247",
-            "Savings": {
-              "Amount": 15073,
-              "Currency": "JPY",
-              "DisplayAmount": "￥15,073 (44%)",
-              "Percentage": 44
-            }
+            "DisplayAmount": "￥19,247"
           },
           "ViolatesMAP": false
         }
@@ -112,13 +107,13 @@
   },
   {
     "ASIN": "B07D4PMT46",
-    "DetailPageURL": "https://www.amazon.co.jp/%E3%83%9B%E3%83%BC%E3%82%B6%E3%83%B3-HOZAN-%E9%9B%BB%E6%B0%97%E5%B7%A5%E4%BA%8B%E5%A3%AB%E6%8A%80%E8%83%BD%E8%A9%A6%E9%A8%93%E5%B7%A5%E5%85%B7%E3%82%BB%E3%83%83%E3%83%88-P-958VVF%E3%82%B9%E3%83%88%E3%83%AA%E3%83%83%E3%83%91%E3%83%BC-%E7%AC%AC%E4%BA%8C%E7%A8%AE%E9%9B%BB%E6%B0%97%E5%B7%A5%E4%BA%8B%E5%A3%AB%E6%8A%80%E8%83%BD%E8%A9%A6%E9%A8%93/dp/B07D4PMT46?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=2YL8VQQONU7I&dib=eyJ2IjoiMSJ9.LiOtsacYS16Ux7LI0SvbENCW_KkvNghAYxKAUUrqfyEKSl3wzXqn7YnhdcQNcZb89W6nQ9ymj2OZRJdJ9D1E0ihvI2SPBlH5Hh1OzpVZM1IDm8rU_rHH5-dl64-HflSwgyQOrCn_8mf6xqPvIbL0EPAw-O3n6YMwiFedHbwS9MsaZlLU_7NgGV7jgyZ3KVrDO-NYXVunuIyvkroViPYg3rdWUTlMikOSc59eFu-j_NNSRB7n0QxPxHBCXmT2Lc0Y4MsGyCRucqnvJoafeGQb46kCQmHvfaw0HzjwMFBCX_Y.aj7SRH8CJkiVOM_2oxZUoITmAfe7MQPSerRzceq3CiM&dib_tag=se&keywords=%E3%83%9B%E3%83%BC%E3%82%B6%E3%83%B3%2B%E7%B7%B4%E7%BF%92%E7%94%A8%E9%83%A8%E6%9D%90&qid=1748639525&sprefix=%E3%83%9B%E3%83%BC%E3%82%B6%E3%83%B3%2B%E7%B7%B4%E7%BF%92%E7%94%A8%E9%83%A8%E6%9D%90%2Caps%2C219&sr=8-3&th=1&linkCode=ll1&tag=takasumir-22&linkId=9374aec708c2153eede217a23e92a706&language=ja_JP&ref_=as_li_ss_tl",
+    "DetailPageURL": "https://www.amazon.co.jp/dp/B07D4PMT46?tag=takasumir-22&linkCode=ogi&th=1&psc=1",
     "Images": {
       "Primary": {
         "Medium": {
-          "URL": "https://m.media-amazon.com/images/W/MEDIAX_1215821-T2/images/I/61PXsmqmCLL._AC_SL320_.jpg",
-          "Height": 320,
-          "Width": 320
+          "URL": "https://m.media-amazon.com/images/I/51eYwx+hN3L._SL160_.jpg",
+          "Height": 160,
+          "Width": 160
         }
       }
     },
@@ -222,18 +217,31 @@
     "Images": {
       "Primary": {
         "Medium": {
-          "URL": "https://m.media-amazon.com/images/W/MEDIAX_1215821-T2/images/I/61bvxqtwhjL._AC_SL160_.jpg",
+          "URL": "https://m.media-amazon.com/images/I/41j-1mX7nRL._SL160_.jpg",
           "Height": 160,
-          "Width": 148
+          "Width": 160
         }
       }
     },
     "ItemInfo": {
       "Title": {
-        "DisplayValue": "ホーザン(HOZAN) VVFストリッパー 電気工事士試験対応 ワイヤーストリッパー P-958 ",
+        "DisplayValue": "ホーザン(HOZAN) VVFストリッパー 電気工事士試験対応 ワイヤーストリッパー P-958",
         "Label": "Title",
         "Locale": "ja_JP"
       }
+    },
+    "Offers": {
+      "Listings": [
+        {
+          "Id": "1jikD5GkHLRILivVZeY1q3t1%2BOYbgBzz0OkgrdD%2FI%2BsYqAoukom1scxCg4JNJ2%2BN%2BYXJIATRH%2FQ555soJcmspm0xPJifetQ3O8AbXGOp46XGZ6o9RrEF%2F1vIJIjQWGQWklj3Nkb2j1XWeEL8Ppq%2BRSxyOABCHwktAs0T5ajmH%2BdXwq14FP7Lbg%3D%3D",
+          "Price": {
+            "Amount": 4294,
+            "Currency": "JPY",
+            "DisplayAmount": "￥4,294"
+          },
+          "ViolatesMAP": false
+        }
+      ]
     }
   },
   {
@@ -242,18 +250,31 @@
     "Images": {
       "Primary": {
         "Medium": {
-          "URL": "https://m.media-amazon.com/images/W/MEDIAX_1215821-T2/images/I/61xVyVViCQL._AC_SL160_.jpg",
+          "URL": "https://m.media-amazon.com/images/I/31RvbVGqyVL._SL160_.jpg",
           "Height": 160,
-          "Width": 151
+          "Width": 160
         }
       }
     },
     "ItemInfo": {
       "Title": {
-        "DisplayValue": "ホーザン(HOZAN) VVFストリッパー 電気工事士試験対応 ワイヤーストリッパー P-958 ",
+        "DisplayValue": "ホーザン(HOZAN) VVFストリッパー 第二種電気工事士試験対応 機械式ワイヤーストリッパー 1.6/2.0ｍｍエコ電線にも対応 P-929",
         "Label": "Title",
         "Locale": "ja_JP"
       }
+    },
+    "Offers": {
+      "Listings": [
+        {
+          "Id": "5ERgmht2CjFSFNe1QIknUv3r7goyX8llfaLoNq38xwqyEwOPwmXCySZd7lfc0QaLeovNQWy%2BwTZuvNHqomOmMJe3hC2MTRAXNZ3emXvKgqQlEMxXJa%2B%2Ba%2BC1oAYfXzQWcCemZrXF3sQ%3D",
+          "Price": {
+            "Amount": 8499,
+            "Currency": "JPY",
+            "DisplayAmount": "￥8,499"
+          },
+          "ViolatesMAP": false
+        }
+      ]
     }
   }
 ]

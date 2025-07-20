@@ -1,3 +1,6 @@
-export default function Mondai(props) {
-  
+export async function Mondai(props) {
+  const filename = `./Mondai_${props.examno}.tsx`;
+  import(filename).then((mod)=>{
+    
+  }
 }

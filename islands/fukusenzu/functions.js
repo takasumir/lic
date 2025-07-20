@@ -3,15 +3,19 @@ import { diagramData } from "./data.js";
 import { genSp } from "./sprite.js";
 // Global functions
 const baseSize = 40;
+let observer = null;
 export function init(sldCtx, mldCtx, examno, step) {
   eraseBackground(sldCtx);
   sldCtx.save();
   sldCtx.scale(2, 2);
   drawDiagram(sldCtx, diagramData, examno, "sld", 0b00001, false);
   sldCtx.restore();
-
-  //  console.log(genSp(diagramData[0].mld.lines));
-  createObserver(mldCtx.canvas, examno, step);
+  if (observer !== null) {
+    observer.unobserve(mldCtx.canvas);
+    observer.disconnect();
+  }
+  observer = createObserver(examno, step);
+  observer.observe(mldCtx.canvas);
 }
 export function eraseBackground(context) {
   context.save();
@@ -583,7 +587,7 @@ export function drawElement(context, v, color = "#222", override = false) {
       if (v.length > 5) {
         context.rotate(v[5]);
       }
-      addLabel(context, 0, 0, v[2], v[5] ?? "#222");
+      addLabel(context, 0, 0, v[2], v[6] ?? "#222");
       context.restore();
       break;
     case "e":
@@ -734,7 +738,7 @@ function toggleAnimation(entries, examno, step) {
     }
   });
 }
-function createObserver(element, examno, step) {
+function createObserver(examno, step) {
   // Intersection Obserber
   const observer = new IntersectionObserver(
     (entries) => {
@@ -750,5 +754,5 @@ function createObserver(element, examno, step) {
       threshold: 0.75,
     },
   );
-  observer.observe(element);
+  return observer;
 }
