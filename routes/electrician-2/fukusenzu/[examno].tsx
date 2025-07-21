@@ -4,7 +4,7 @@ import { Head } from "$fresh/runtime.ts";
 import { FukusenzuApp } from "../../../islands/fukusenzu/FukusenzuApp.tsx";
 
 function nextExamno(examno) {
-  return examno >= 4 ? 1 : ++examno;
+  return examno >= 6 ? 1 : ++examno;
 }
 function prevExamno(examno) {
   return examno <= 1 ? 4 : --examno;

@@ -95,6 +95,20 @@ export default function Fukusenzu() {
           title="候補問題No.4"
           description="三相200Vの電源がある候補問題No.4は一見難しそうですが、実は単純な問題です。"
         />
+        <Linkcard
+          url="./fukusenzu/5"
+          image="/electrician-2/circuit.webp"
+          alt="候補問題No.5の解説"
+          title="候補問題No.5"
+          description="単相200V電源と接地端子を接地極付きコンセントへ接続する問題です。単相と三相の違いはありますが、No.4と似た問題です。"
+        />
+        <Linkcard
+          url="./fukusenzu/6"
+          image="/electrician-2/circuit.webp"
+          alt="候補問題No.6の解説"
+          title="候補問題No.6"
+          description="3路スイッチを2個使い、いずれのスイッチでも機器を点滅できる回路です。3路スイッチの使い方をしっかり覚えましょう。"
+        />
       </main>
     </>
   );
