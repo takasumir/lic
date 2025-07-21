@@ -221,6 +221,7 @@ export function drawSup(context, x, y, angle = 0) {
 }
 export function drawSup_4_5(context, x, y, kind = "4") {
   let color1;
+  let color2;
   context.save();
   context.fillStyle = "#fff";
   context.strokeRect(60, 40, 60, 200);
@@ -238,7 +239,8 @@ export function drawSup_4_5(context, x, y, kind = "4") {
     context.fillText("電源", 10, 170);
     context.fillText("3φ3W", 10, 190);
     context.fillText("200V", 10, 210);
-    color1 = "#f22";
+    color1 = "#222";
+    color2 = "#f22";
   } else {
     /* kind === 5 */
     context.fillText("電源", 10, 80);
@@ -247,15 +249,16 @@ export function drawSup_4_5(context, x, y, kind = "4") {
     context.fillText("200V", 10, 180);
     context.fillText("ET", 20, 225);
     drawLine(context, 60, 200, 120, 200);
-    color1 = "#2f2";
+    color1 = "#fff";
+    color2 = "#2f2";
   }
   context.restore();
   drawLine(context, 60, 120, 120, 120);
   drawDot(context, 95, 60, 5, "#fff");
   drawDot(context, 95, 100, 5, "#222");
-  drawDot(context, 95, 140, 5, "#222");
+  drawDot(context, 95, 140, 5, color1);
   drawDot(context, 95, 180, 5, "#fff");
-  drawDot(context, 95, 220, 5, color1);
+  drawDot(context, 95, 220, 5, color2);
 }
 export function drawSwitch(context, x, y, label = "", angle = 0) {
   context.save();

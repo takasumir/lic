@@ -29,171 +29,149 @@ export function Kaisetsu({ step, prevStep, nextStep }) {
     <>
       {/*Step: {step.toString(2)}*/}
       <div
-        class={`items-start gap-2.5 ${step === 0b00000 ? "flex" : "hidden"}`}
+        class={`grid-cols-[56px_1fr] md:grid-cols-[96px_1fr] items-center gap-2.5 ${step === 0b00000 ? "grid" : "hidden"}`}
       >
         <img
-          class="w-24 h-24 rounded-full"
+          class="w-14 h-14 md:w-24 md:h-24 md:row-span-2 self-start rounded-full"
           src="/electrician-2/electrician-girl-face.webp"
           alt="電気工事士の女の子の顔"
         />
-        <div>
-          <h2 class="font-bold text-lg mb-4">機器を並べる</h2>
-          <div class="flex flex-col w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
-            <p>まずは機器を並べていきましょう。</p>
-            <ul class="list-disc list-inside my-2">
-              <li>
-                電源は非接地側を黒点●、接地側を白点○の2つの点で表現します。
-              </li>
-              <li>ランプレセプタクル、コンセントは単線図の記号通りです。</li>
-              <li>スイッチは両側を白点○でスイッチ記号を描きます。</li>
-              <li>
-                ジョイントボックスは中に配線接続を描くので大きめの○で表現します。
-              </li>
-            </ul>
-          </div>
+        <h2 class="font-bold text-lg">機器を並べる</h2>
+        <div class="col-span-2 md:col-span-1 flex flex-col w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
+          <p>まずは機器を並べていきましょう。</p>
+          <ul class="list-disc list-inside my-2">
+            <li>電源は非接地側を黒点●、接地側を白点○の2つの点で表現します。</li>
+            <li>ランプレセプタクル、コンセントは単線図の記号通りです。</li>
+            <li>スイッチは両側を白点○でスイッチ記号を描きます。</li>
+            <li>
+              ジョイントボックスは中に配線接続を描くので大きめの○で表現します。
+            </li>
+          </ul>
         </div>
       </div>
 
       <div
-        class={`items-start gap-2.5 ${step === 0b00001 ? "flex" : "hidden"}`}
+        class={`grid-cols-[56px_1fr] md:grid-cols-[96px_1fr] items-center gap-2.5 ${step === 0b00001 ? "grid" : "hidden"}`}
       >
         <img
-          class="w-24 h-24 rounded-full"
+          class="w-14 h-14 md:w-24 md:h-24 md:row-span-2 self-start rounded-full"
           src="/electrician-2/electrician-girl-face.webp"
           alt="電気工事士の女の子の顔"
         />
-        <div>
-          <h2 class="font-bold text-lg mb-4">電源の接地側と機器を接続</h2>
-          <div class="flex flex-col w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
-            <p>
-              スイッチ以外の機器に接地側の配線を繋いでいきましょう。電源からジョイントボックスへ、ジョイントボックスから機器へと線を繋ぎます。ジョイントボックス内では必ず線同士をリングスリーブか差し込みコネクタで接続するため、接続記号を●で表現します。
-            </p>
-            <p>
-              接地側の配線色は「白色」と決まっていますが、図では青色で記載しています。実際の試験でも色をつけておくと分かりやすいです。
-            </p>
-            <p>
-              確認表示灯への線はまだ描いていません。今回は常時点灯なのでこの時点で非接地側を繋いでもよいですが、同時点滅、異時点滅はややこしいので最後に残しておきます。
-            </p>
-          </div>
+        <h2 class="font-bold text-lg">電源の接地側と機器を接続</h2>
+        <div class="col-span-2 md:col-span-1 flex flex-col w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
+          <p>
+            スイッチ以外の機器に接地側の配線を繋いでいきましょう。電源からジョイントボックスへ、ジョイントボックスから機器へと線を繋ぎます。ジョイントボックス内では必ず線同士をリングスリーブか差し込みコネクタで接続するため、接続記号を●で表現します。
+          </p>
+          <p>
+            接地側の配線色は「白色」と決まっていますが、図では青色で記載しています。実際の試験でも色をつけておくと分かりやすいです。
+          </p>
+          <p>
+            確認表示灯への線はまだ描いていません。今回は常時点灯なのでこの時点で非接地側を繋いでもよいですが、同時点滅、異時点滅はややこしいので最後に残しておきます。
+          </p>
         </div>
       </div>
 
       <div
-        class={`items-start gap-2.5 ${step === 0b00010 ? "flex" : "hidden"}`}
+        class={`grid-cols-[56px_1fr] md:grid-cols-[96px_1fr] items-center gap-2.5 ${step === 0b00010 ? "grid" : "hidden"}`}
       >
         <img
-          class="w-24 h-24 rounded-full"
+          class="w-14 h-14 md:w-24 md:h-24 md:row-span-2 self-start rounded-full"
           src="/electrician-2/electrician-girl-face.webp"
           alt="電気工事士の女の子の顔"
         />
-        <div>
-          <h2 class="font-bold text-lg mb-4">
-            電源の非接地側をコンセント、スイッチと接続
-          </h2>
-          <div class="flex flex-col w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
-            <p>
-              電源の非接地側はコンセントとスイッチに接続します。コンセント以外の機器は、スイッチを介して接続されます。例外が確認表示灯ですが、ここでは飛ばします。
-            </p>
-          </div>
+        <h2 class="font-bold text-lg">
+          電源の非接地側をコンセント、スイッチと接続
+        </h2>
+        <div class="col-span-2 md:col-span-1 flex flex-col w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
+          <p>
+            電源の非接地側はコンセントとスイッチに接続します。コンセント以外の機器は、スイッチを介して接続されます。例外が確認表示灯ですが、ここでは飛ばします。
+          </p>
         </div>
       </div>
 
       <div
-        class={`items-start gap-2.5 ${step === 0b00100 ? "flex" : "hidden"}`}
+        class={`grid-cols-[56px_1fr] md:grid-cols-[96px_1fr] items-center gap-2.5 ${step === 0b00100 ? "grid" : "hidden"}`}
       >
         <img
-          class="w-24 h-24 rounded-full"
+          class="w-14 h-14 md:w-24 md:h-24 md:row-span-2 self-start rounded-full"
           src="/electrician-2/electrician-girl-face.webp"
           alt="電気工事士の女の子の顔"
         />
-        <div>
-          <h2 class="font-bold text-lg mb-4">スイッチと機器を接続</h2>
-          <div class="flex flex-col w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
-            <p>
-              スイッチから機器までを接続します。「イ」のスイッチから、「イ」のランプレセプタクル2ヶ所へ繋げるため、途中のジョイントボックスで分岐します。
-            </p>
-          </div>
+        <h2 class="font-bold text-lg">スイッチと機器を接続</h2>
+        <div class="col-span-2 md:col-span-1 flex flex-col w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
+          <p>
+            スイッチから機器までを接続します。「イ」のスイッチから、「イ」のランプレセプタクル2ヶ所へ繋げるため、途中のジョイントボックスで分岐します。
+          </p>
         </div>
       </div>
 
       <div
-        class={`items-start gap-2.5 ${step === 0b01000 ? "flex" : "hidden"}`}
+        class={`grid-cols-[56px_1fr] md:grid-cols-[96px_1fr] items-center gap-2.5 ${step === 0b01000 ? "grid" : "hidden"}`}
       >
         <img
-          class="w-24 h-24 rounded-full"
+          class="w-14 h-14 md:w-24 md:h-24 md:row-span-2 self-start rounded-full"
           src="/electrician-2/electrician-girl-face.webp"
           alt="電気工事士の女の子の顔"
         />
-        <div>
-          <h2 class="font-bold text-lg mb-4">
-            確認表示灯（パイロットランプ）の接続
-          </h2>
-          <div class="flex flex-col w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
-            <p>
-              ここまできたらもう一息、最後に確認表示灯を接続しましょう。今回は「常時点灯」です。常時点灯とは、スイッチの状態に関わらず常に点灯しているということで、接地側と非接地側がスイッチを介さずに常に確認表示灯に繋がるようにすれば良いです。
-            </p>
-            <p>
-              レセプタクルランプなどの他の機器と同じようにまず電源から接地側を接続します。非接地側も同様ですが、スイッチと確認表示灯が連用取付枠に取り付けられているため、わたり配線で繋げることになります。
-            </p>
-          </div>
+        <h2 class="font-bold text-lg">確認表示灯（パイロットランプ）の接続</h2>
+        <div class="col-span-2 md:col-span-1 flex flex-col w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
+          <p>
+            ここまできたらもう一息、最後に確認表示灯を接続しましょう。今回は「常時点灯」です。常時点灯とは、スイッチの状態に関わらず常に点灯しているということで、接地側と非接地側がスイッチを介さずに常に確認表示灯に繋がるようにすれば良いです。
+          </p>
+          <p>
+            レセプタクルランプなどの他の機器と同じようにまず電源から接地側を接続します。非接地側も同様ですが、スイッチと確認表示灯が連用取付枠に取り付けられているため、わたり配線で繋げることになります。
+          </p>
         </div>
       </div>
 
       <div
-        class={`items-start gap-2.5 ${step === 0b10000 ? "flex" : "hidden"}`}
+        class={`grid-cols-[56px_1fr] md:grid-cols-[96px_1fr] items-center gap-2.5 ${step === 0b10000 ? "grid" : "hidden"}`}
       >
         <img
-          class="w-24 h-24 rounded-full"
+          class="w-14 h-14 md:w-24 md:h-24 md:row-span-2 self-start rounded-full"
           src="/electrician-2/electrician-girl-face.webp"
           alt="電気工事士の女の子の顔"
         />
-        <div>
-          <h2 class="font-bold text-lg mb-4">情報の記入</h2>
-          <div class="flex flex-col w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
-            <p>ここまで来たら、ジョイント等の補足情報を書き込みます。</p>
-            <p>
-              その他の情報の記入は、前の<a href="./1">候補問題No.1</a>
-              の記事に詳細を解説していますのでご参照ください。ここでは結果のみを記載します。
-            </p>
-          </div>
+        <h2 class="font-bold text-lg">情報の記入</h2>
+        <div class="col-span-2 md:col-span-1 flex flex-col w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
+          <p>ここまで来たら、ジョイント等の補足情報を書き込みます。</p>
+          <p>
+            その他の情報の記入は、前の<a href="./1">候補問題No.1</a>
+            の記事に詳細を解説していますのでご参照ください。ここでは結果のみを記載します。
+          </p>
         </div>
       </div>
 
       <div
-        class={`items-start gap-2.5 ${step === 0b100000 ? "flex" : "hidden"}`}
+        class={`grid-cols-[56px_1fr] md:grid-cols-[96px_1fr] items-center gap-2.5 ${step === 0b100000 ? "grid" : "hidden"}`}
       >
         <img
-          class="w-24 h-24 rounded-full"
+          class="w-14 h-14 md:w-24 md:h-24 md:row-span-2 self-start rounded-full"
           src="/electrician-2/electrician-girl-face.webp"
           alt="電気工事士の女の子の顔"
         />
-        <div>
-          <h2 class="font-bold text-lg mb-4">
-            決まっていない電線の色を決定する
-          </h2>
-          <div class="flex flex-col w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
-            <p>
-              ジョイントボックス間、右側のジョイントボックスとスイッチ間の3本線の色分けが決まっていません。通常、当日の問題に記載される施工条件には、電源の接地側を白、電源の非接地側からスイッチまでを黒と指定されるため、図のような色分けになります。
-            </p>
-          </div>
+        <h2 class="font-bold text-lg">決まっていない電線の色を決定する</h2>
+        <div class="col-span-2 md:col-span-1 flex flex-col w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
+          <p>
+            ジョイントボックス間、右側のジョイントボックスとスイッチ間の3本線の色分けが決まっていません。通常、当日の問題に記載される施工条件には、電源の接地側を白、電源の非接地側からスイッチまでを黒と指定されるため、図のような色分けになります。
+          </p>
         </div>
       </div>
 
       <div
-        class={`items-start gap-2.5 ${step === 0b1000000 ? "flex" : "hidden"}`}
+        class={`grid-cols-[56px_1fr] md:grid-cols-[96px_1fr] items-center gap-2.5 ${step === 0b1000000 ? "grid" : "hidden"}`}
       >
         <img
-          class="w-24 h-24 rounded-full"
+          class="w-14 h-14 md:w-24 md:h-24 md:row-span-2 self-start rounded-full"
           src="/electrician-2/electrician-girl-face.webp"
           alt="電気工事士の女の子の顔"
         />
-        <div>
-          <h2 class="font-bold text-lg mb-4">まとめ</h2>
-          <div class="flex flex-col w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
-            <p>
-              第二種電気工事士技能試験の候補問題No.2の複線図は比較的シンプルで大きく悩むところは無いので当日出される施工条件をよく読んで落ち着いて解きましょう。確認表示灯（パイロットランプ）については、常時点灯、同時点滅、異時点滅をしっかり理解しておく必要がありますが別途記事で解説したいと思います。
-            </p>
-          </div>
+        <h2 class="font-bold text-lg">まとめ</h2>
+        <div class="col-span-2 md:col-span-1 flex flex-col w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
+          <p>
+            第二種電気工事士技能試験の候補問題No.2の複線図は比較的シンプルで大きく悩むところは無いので当日出される施工条件をよく読んで落ち着いて解きましょう。確認表示灯（パイロットランプ）については、常時点灯、同時点滅、異時点滅をしっかり理解しておく必要がありますが別途記事で解説したいと思います。
+          </p>
         </div>
       </div>
     </>
