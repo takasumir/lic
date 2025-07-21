@@ -27,6 +27,7 @@ import * as $fukusenzu_Mondai_3 from "./islands/fukusenzu/Mondai_3.tsx";
 import * as $fukusenzu_Mondai_4 from "./islands/fukusenzu/Mondai_4.tsx";
 import * as $fukusenzu_Mondai_5 from "./islands/fukusenzu/Mondai_5.tsx";
 import * as $fukusenzu_Mondai_6 from "./islands/fukusenzu/Mondai_6.tsx";
+import * as $fukusenzu_Mondai_7 from "./islands/fukusenzu/Mondai_7.tsx";
 import * as $fukusenzu_class from "./islands/fukusenzu/class.js";
 import * as $fukusenzu_data from "./islands/fukusenzu/data.js";
 import * as $fukusenzu_functions from "./islands/fukusenzu/functions.js";
@@ -67,6 +68,7 @@ const manifest = {
     "./islands/fukusenzu/Mondai_4.tsx": $fukusenzu_Mondai_4,
     "./islands/fukusenzu/Mondai_5.tsx": $fukusenzu_Mondai_5,
     "./islands/fukusenzu/Mondai_6.tsx": $fukusenzu_Mondai_6,
+    "./islands/fukusenzu/Mondai_7.tsx": $fukusenzu_Mondai_7,
     "./islands/fukusenzu/class.js": $fukusenzu_class,
     "./islands/fukusenzu/data.js": $fukusenzu_data,
     "./islands/fukusenzu/functions.js": $fukusenzu_functions,

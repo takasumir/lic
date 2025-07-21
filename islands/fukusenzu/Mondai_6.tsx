@@ -54,7 +54,7 @@ export function Kaisetsu({ step, prevStep, nextStep }) {
         <h2 class="font-bold text-lg">電源の接地側と機器を接続</h2>
         <div class="col-span-2 md:col-span-1 flex flex-col w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
           <p>
-            スイッチ以外の機器にマイナス側の配線を繋いでいきましょう。電源からジョイントボックスへ、ジョイントボックスからコンセント、引掛けシーリングへ線を繋ぎます。
+            スイッチ以外の機器に接地側の配線を繋いでいきましょう。電源からジョイントボックスへ、ジョイントボックスからコンセント、引掛けシーリングへ線を繋ぎます。
           </p>
           <p>
             ジョイントボックス内では必ず線同士をリングスリーブか差し込みコネクタで接続するため、接続記号を
@@ -73,7 +73,7 @@ export function Kaisetsu({ step, prevStep, nextStep }) {
           alt="電気工事士の女の子の顔"
         />
         <h2 class="font-bold text-lg">
-          100V電源の非接地側をコンセント、3路スイッチの0番と接続
+          電源の非接地側をコンセント、3路スイッチの0番と接続
         </h2>
         <div class="col-span-2 md:col-span-1 flex flex-col w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
           <p>
@@ -133,7 +133,7 @@ export function Kaisetsu({ step, prevStep, nextStep }) {
             線はすべて繋がりましたので、このあとの制作作業のために必要な情報を書き込んで完成です。
           </p>
           <p>
-            ジョイントボックス内のジョイント部は線の本数を記入しておきます。差込形コネクタ、リングスリーブどちらを使うか当日の施工条件をよく読みましょう。ここでは左側（A）のジョイントボックスに差込形、右側（B）にリングスリーブの想定で記載しています。
+            ジョイントボックス内のジョイント部は線の本数を記入しておきます。差込形コネクタ、リングスリーブどちらを使うか当日の施工条件をよく読みましょう。ここでは左側（A）のジョイントボックスに差込形コネクタ、右側（B）にリングスリーブの想定で記載しています。
           </p>
         </div>
       </div>

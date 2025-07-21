@@ -109,6 +109,13 @@ export default function Fukusenzu() {
           title="候補問題No.6"
           description="3路スイッチを2個使い、いずれのスイッチでも機器を点滅できる回路です。3路スイッチの使い方をしっかり覚えましょう。"
         />
+        <Linkcard
+          url="./fukusenzu/7"
+          image="/electrician-2/circuit.webp"
+          alt="候補問題No.7の解説"
+          title="候補問題No.7"
+          description="3路スイッチ2個と4路スイッチを使い、いずれのスイッチでも機器を点滅できる回路です。複雑な問題ですが頑張って理解しましょう！"
+        />
       </main>
     </>
   );
