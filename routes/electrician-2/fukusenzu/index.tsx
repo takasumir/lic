@@ -116,6 +116,27 @@ export default function Fukusenzu() {
           title="候補問題No.7"
           description="3路スイッチ2個と4路スイッチを使い、いずれのスイッチでも機器を点滅できる回路です。複雑な問題ですが頑張って理解しましょう！"
         />
+        <Linkcard
+          url="./fukusenzu/8"
+          image="/electrician-2/circuit.webp"
+          alt="候補問題No.8の解説"
+          title="候補問題No.8"
+          description="見慣れない▲の並んだ記号、リモコンリレーがポイントとなる問題です。"
+        />
+        <Linkcard
+          url="./fukusenzu/9"
+          image="/electrician-2/circuit.webp"
+          alt="候補問題No.9の解説"
+          title="候補問題No.9"
+          description="これといった特徴も無い単線図ですが、電源側EETコンセントまでの線が VVF 2.0-2C と太い線を使っているのに注意です。"
+        />
+        <Linkcard
+          url="./fukusenzu/10"
+          image="/electrician-2/circuit.webp"
+          alt="候補問題No.10の解説"
+          title="候補問題No.10"
+          description="この問題の特徴は、同時点滅の確認表示灯（パイロットランプ）です。常時点灯、同時点滅、異時点滅回路の違いを確認しましょう！"
+        />
       </main>
     </>
   );

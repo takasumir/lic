@@ -70,7 +70,7 @@ export function Kaisetsu({ step, prevStep, nextStep }) {
         <h2 class="font-bold text-lg">100V電源の接地側と機器を接続</h2>
         <div class="col-span-2 md:col-span-1 flex flex-col w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
           <p>
-            スイッチ以外の機器に接地側の配線を繋いでいきましょう。電源からジョイントボックスへ、ジョイントボックスからコンセント、蛍光灯、ランプレセプタクルへ線を繋ぎます。
+            スイッチ以外の機器に接地側の配線を繋いでいきましょう。電源からジョイントボックスへ、ジョイントボックスからランプレセプタクル、コンセント、蛍光灯へ線を繋ぎます。
           </p>
           <p>
             非接地側の線を青色で書いていますが、非接地線の色はこの時点で決まるため、フリクションなどの消せるカラーボールペンで描いてしまうのがおすすめですよ！

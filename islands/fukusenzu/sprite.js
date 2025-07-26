@@ -29,7 +29,7 @@ export function genSp(diagramData, examno, step) {
     });
   } else if (thisExamData.lines.filter((v) => v[0] === step).length > 0) {
     return thisExamData.lines
-      .filter((v) => v[0] === step)
+      .filter((v) => v[0] === step && v[1] !== "invisible")
       .map((v) => {
         switch (v[1]) {
           case "l":

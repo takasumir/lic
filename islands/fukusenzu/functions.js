@@ -639,7 +639,15 @@ export function drawDiagram(
   flag = 0b00000,
   override = false,
 ) {
-  const lines = data[examno - 1][sldOrMld].lines.filter((v) => v[0] & flag);
+  const invisible = data[examno - 1][sldOrMld].lines.filter(
+    (v) => v[0] & flag && v[1] === "invisible",
+  );
+  const extract = invisible.length > 0 ? invisible[0][2] : 0;
+
+  const lines = data[examno - 1][sldOrMld].lines.filter(
+    (v) => (v[0] & flag) ^ extract,
+  );
+
   const insts = data[examno - 1][sldOrMld].insts;
   const info = data[examno - 1][sldOrMld].info.filter((v) => v[0] & flag);
   drawElements(context, lines, flag, "#222", override);
@@ -716,7 +724,6 @@ function initializeAnimation(entry, examno, step) {
   animatingContext.fillStyle = "#fff";
 
   const sprites = genSp(diagramData, examno, step);
-
   if (sprites.length > 0) {
     sprites[0].animating = true;
     sprites[0].visible = true;
@@ -728,7 +735,7 @@ function initializeAnimation(entry, examno, step) {
     animate(startTime, entry, examno, step, sprites, override);
   } else {
     eraseBackground(animatingContext);
-    drawDiagram(animatingContext, diagramData, examno, "mld", -1, true);
+    drawDiagram(animatingContext, diagramData, examno, "mld", step - 1, true);
   }
 }
 function toggleAnimation(entries, examno, step) {
