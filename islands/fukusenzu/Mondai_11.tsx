@@ -3,12 +3,12 @@ export const kaisetsuLength = 0b0100000;
 export function Mondai(props) {
   return (
     <>
-      <p>候補問題No.10を見ていきましょう。</p>
+      <p>候補問題No.11を見ていきましょう。</p>
       <p>
-        電源は単相100Vで、ブレーカーが頭にあります。ブレーカーより電源供給側は施工省略なので、ブレーカーの二次側から電源供給されると思って考えていけばよいです。
+        候補問題No.11の特徴は、施工時にアウトレットボックスとねじなし電線管(E19)、ねじなしボックスコネクタ(E19)を使うことです。
       </p>
       <p>
-        この問題の特徴は、同時点滅の確認表示灯（パイロットランプ）です。同時点滅は、引掛シーリングやランプレセプタクルをスイッチで点滅させるのと同じことなので、ジョイントボックスを介さずスイッチの隣にあるので渡り線を使うことに注意だけすればわかりやすいと思います。
+        施工が少し大変ですが、複線図としては2個のスイッチでそれぞれ1つずつの機器を点滅させるシンプルな問題です。
       </p>
     </>
   );
@@ -31,8 +31,9 @@ export function Kaisetsu({ step, prevStep, nextStep }) {
           <p>まずは機器を並べていきましょう。</p>
           <ul class="list-disc list-inside my-2">
             <li>電源、スイッチ、その他機器を記入します。</li>
-            <li>確認表示灯（パイロットランプ）は○で記載しています。</li>
-            <li>ジョイントボックスは、大きめの丸で描いています。</li>
+            <li>
+              ジョイントボックス（アウトレットボックス）は、大きめの点線四角で描いています。
+            </li>
           </ul>
         </div>
       </div>
@@ -48,12 +49,8 @@ export function Kaisetsu({ step, prevStep, nextStep }) {
         <h2 class="font-bold text-lg">電源の接地側と機器を接続</h2>
         <div class="col-span-2 md:col-span-1 flex flex-col w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
           <p>
-            スイッチ以外の各機器に接地側の配線を繋いでいきましょう。電源の直後にブレーカがありますが、ブレーカの電源側は施工省略なのでブレーカの端子＝電源と考えてよいです。図では単に線がブレーカを通るように描いています。
+            接地側の配線をジョイントボックスを介しスイッチ以外の各機器に繋いでいきましょう。非接地側の線は施工条件で白色を指定されるため、（白の変わりに）青色で描いています。
           </p>
-          <p>
-            同時点滅のパイロットランプも他の機器と同様にスイッチで点滅させるので、接地側の線を繋ぎます。
-          </p>
-          <p>パイロットランプとコンセント間はわたり線で接続します。</p>
         </div>
       </div>
 
@@ -69,7 +66,7 @@ export function Kaisetsu({ step, prevStep, nextStep }) {
         <div class="col-span-2 md:col-span-1 flex flex-col w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
           <p>電源の非接地側をコンセントとスイッチに接続します。</p>
           <p>
-            コンセントとスイッチが同じ連用取付枠に付いているので、お互いを渡り線で接続します。これもどちらが先でも構いませんが今回はスイッチ→コンセントの順に繋ぎました。
+            非接地側は、コンセントとスイッチに接続します。コンセントとスイッチ「イ」が同じ連用取付枠に付いているので、お互いを渡り線で接続します。
           </p>
         </div>
       </div>
@@ -85,7 +82,7 @@ export function Kaisetsu({ step, prevStep, nextStep }) {
         <h2 class="font-bold text-lg">スイッチと機器間を接続</h2>
         <div class="col-span-2 md:col-span-1 flex flex-col w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
           <p>
-            スイッチから点滅させる機器に接続していきます。引掛シーリング、ランプレセプタクル、確認表示灯（パイロットランプ）の3つに接続するわけですが、スイッチと同じ連用取付枠に確認表示灯があるので、スイッチと確認表示灯を渡り線で接続してから、残りの機器に繋いでいきます。
+            スイッチから機器へ接続していきます。スイッチ「イ」からジョイントボックスを経由して引掛シーリングへ接続。スイッチ「ロ」も同様にランプレセプタクルへ接続します。
           </p>
         </div>
       </div>
@@ -117,7 +114,7 @@ export function Kaisetsu({ step, prevStep, nextStep }) {
         <h2 class="font-bold text-lg">線の色を決定する</h2>
         <div class="col-span-2 md:col-span-1 flex flex-col w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
           <p>
-            決まっていない線の色はジョイントボックスからスイッチ側に伸びた3本の線のうち、非接地側の2本です。施工条件で「電源から点滅器及びコンセントの非接地側電線には、すべて黒色を使用する」と指定されていますので、赤色はスイッチから機器へ行く線に決まります。
+            決まっていない線の色はジョイントボックスからスイッチ「イ」側に伸びた3本の線のうち、非接地側の2本です。施工条件で「電源から点滅器及びコンセントの非接地側電線には、すべて黒色を使用する」と指定されますので、赤色はスイッチから機器へ行く線に決まります。
           </p>
         </div>
       </div>
@@ -133,7 +130,7 @@ export function Kaisetsu({ step, prevStep, nextStep }) {
         <h2 class="font-bold text-lg">完成</h2>
         <div class="col-span-2 md:col-span-1 flex flex-col w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
           <p>
-            第二種電気工事士技能試験の候補問題No.10の複線図は、確認表示灯（パイロットランプ）の「同時点滅」が他のランプレセプタクルなどの機器と同様の接続であることを理解できていれば施工は簡単です。確認表示灯（パイロットランプ）の常時点灯、同時点滅、異時点滅回路の違いを確認しておきましょう！
+            第二種電気工事士技能試験の候補問題No.11の複線図は、シンプルで易しい問題です。アウトレットボックスの施工がやや面倒なのでサクッと早めに複線図を描けるようにしておきましょう。
           </p>
         </div>
       </div>

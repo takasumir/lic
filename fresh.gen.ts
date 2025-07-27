@@ -23,6 +23,9 @@ import * as $Navbar from "./islands/Navbar.tsx";
 import * as $fukusenzu_FukusenzuApp from "./islands/fukusenzu/FukusenzuApp.tsx";
 import * as $fukusenzu_Mondai_1 from "./islands/fukusenzu/Mondai_1.tsx";
 import * as $fukusenzu_Mondai_10 from "./islands/fukusenzu/Mondai_10.tsx";
+import * as $fukusenzu_Mondai_11 from "./islands/fukusenzu/Mondai_11.tsx";
+import * as $fukusenzu_Mondai_12 from "./islands/fukusenzu/Mondai_12.tsx";
+import * as $fukusenzu_Mondai_13 from "./islands/fukusenzu/Mondai_13.tsx";
 import * as $fukusenzu_Mondai_2 from "./islands/fukusenzu/Mondai_2.tsx";
 import * as $fukusenzu_Mondai_3 from "./islands/fukusenzu/Mondai_3.tsx";
 import * as $fukusenzu_Mondai_4 from "./islands/fukusenzu/Mondai_4.tsx";
@@ -67,6 +70,9 @@ const manifest = {
     "./islands/fukusenzu/FukusenzuApp.tsx": $fukusenzu_FukusenzuApp,
     "./islands/fukusenzu/Mondai_1.tsx": $fukusenzu_Mondai_1,
     "./islands/fukusenzu/Mondai_10.tsx": $fukusenzu_Mondai_10,
+    "./islands/fukusenzu/Mondai_11.tsx": $fukusenzu_Mondai_11,
+    "./islands/fukusenzu/Mondai_12.tsx": $fukusenzu_Mondai_12,
+    "./islands/fukusenzu/Mondai_13.tsx": $fukusenzu_Mondai_13,
     "./islands/fukusenzu/Mondai_2.tsx": $fukusenzu_Mondai_2,
     "./islands/fukusenzu/Mondai_3.tsx": $fukusenzu_Mondai_3,
     "./islands/fukusenzu/Mondai_4.tsx": $fukusenzu_Mondai_4,

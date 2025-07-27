@@ -4,10 +4,10 @@ import { Head } from "$fresh/runtime.ts";
 import { FukusenzuApp } from "../../../islands/fukusenzu/FukusenzuApp.tsx";
 
 function nextExamno(examno) {
-  return examno >= 10 ? 1 : ++examno;
+  return examno >= 13 ? 1 : ++examno;
 }
 function prevExamno(examno) {
-  return examno <= 1 ? 10 : --examno;
+  return examno <= 1 ? 13 : --examno;
 }
 
 export default async function Fukusenzu(req: Request, ctx: RouteContext) {
@@ -53,7 +53,7 @@ export default async function Fukusenzu(req: Request, ctx: RouteContext) {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              class="w-4 h-4 mr-1.5"
+              class="w-4 h-4 ml-1.5"
             >
               <path
                 stroke="black"
@@ -66,6 +66,15 @@ export default async function Fukusenzu(req: Request, ctx: RouteContext) {
             </svg>
             前の問題 No.{prevExamno(ctx.params.examno)}
           </a>
+
+          <a
+            href="./"
+            class="rounded-md border border-transparent py-2 px-4 flex items-center text-center text-sm transition-all text-slate-600 hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+            type="button"
+          >
+            問題一覧
+          </a>
+
           <a
             href={nextExamno(ctx.params.examno)}
             class="rounded-md border border-transparent py-2 px-4 flex items-center text-center text-sm transition-all text-slate-600 hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"

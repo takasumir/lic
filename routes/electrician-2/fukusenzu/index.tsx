@@ -137,6 +137,27 @@ export default function Fukusenzu() {
           title="候補問題No.10"
           description="この問題の特徴は、同時点滅の確認表示灯（パイロットランプ）です。常時点灯、同時点滅、異時点滅回路の違いを確認しましょう！"
         />
+        <Linkcard
+          url="./fukusenzu/11"
+          image="/electrician-2/circuit.webp"
+          alt="候補問題No.11の解説"
+          title="候補問題No.11"
+          description="施工時にアウトレットボックスとねじなし電線管(E19)を使いますが、複線図としては2個のスイッチでそれぞれ1つずつの機器を点滅させるシンプルな問題です。"
+        />
+        <Linkcard
+          url="./fukusenzu/12"
+          image="/electrician-2/circuit.webp"
+          alt="候補問題No.12の解説"
+          title="候補問題No.12"
+          description="候補問題No.12は、候補問題No.11と似た問題です。違いはジョイントボックスが1つ増えて2つになったこと、金属管では無く合成樹脂製可とう管(PF16)を使うことです。"
+        />
+        <Linkcard
+          url="./fukusenzu/13"
+          image="/electrician-2/circuit.webp"
+          alt="候補問題No.13の解説"
+          title="候補問題No.13"
+          description="候補問題No.13のポイントは、自動点滅器で屋外灯を点滅させる回路があることです。自動点滅器は3箇所の端子がある端子台で代用されており、端子台がスイッチだと思えば複線図は難しいことはありません。"
+        />
       </main>
     </>
   );

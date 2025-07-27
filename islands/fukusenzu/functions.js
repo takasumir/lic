@@ -512,6 +512,9 @@ export function drawRS(context, x, y, text = "", label = "") {
       -tw.width / 2,
       35 + (tw.actualBoundingBoxAscent - tw.actualBoundingBoxDescent) / 2,
     );
+    context.fillText("S1", -62, 92);
+    context.fillText("S2", -22, 92);
+    context.fillText("L1", 23, 92);
   } else if (text === "AS") {
     context.beginPath();
     context.rect(-12, 25, 24, 16);
@@ -526,11 +529,11 @@ export function drawRS(context, x, y, text = "", label = "") {
     context.lineTo(6, 40);
     context.stroke();
     context.restore();
+    context.fillText("1", -45, 92);
+    context.fillText("2", -5, 92);
+    context.fillText("3", 35, 92);
   }
 
-  context.fillText("S1", -62, 92);
-  context.fillText("S2", -22, 92);
-  context.fillText("L1", 23, 92);
   context.fillText(label, baseSize + 10, baseSize * 1.6 + 10);
 
   context.translate(40, 35);
