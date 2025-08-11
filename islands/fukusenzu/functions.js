@@ -1,10 +1,32 @@
 "use strict";
 import { diagramData } from "./data.js";
 import { genSp } from "./sprite.js";
+import { Recorder } from "./class.js";
 // Global functions
 const baseSize = 40;
 let observer = null;
 export function init(sldCtx, mldCtx, examno, step) {
+  // Recorder
+  // const _recorder = new Recorder(mldCtx.canvas, 60);
+  // _recorder.start();
+  // mldCtx.canvas.addEventListener(
+  //   "finishanimation",
+  //   (e) => {
+  //     console.log("animation stopped");
+  //     _recorder.stop().then((url) => {
+  //       const ol = document.createElement("ol");
+  //       const li = document.createElement("li");
+
+  //       const a = document.createElement("a");
+  //       a.setAttribute("href", url);
+
+  //       a.textContent = `download a video of ${examno}-${step}`;
+  //       a.setAttribute("download", `capture-${examno}-${step}.webm`);
+  //       a.click();
+  //     });
+  //   },
+  //   false,
+  // );
   eraseBackground(sldCtx);
   sldCtx.save();
   sldCtx.scale(2, 2);
@@ -21,6 +43,8 @@ export function eraseBackground(context) {
   context.save();
   context.resetTransform();
   context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+  context.fillStyle = "white";
+  context.fillRect(0, 0, context.canvas.width, context.canvas.height);
   context.restore();
 }
 export function drawLine(context, x1, y1, x2, y2, color = "#222") {
@@ -705,6 +729,8 @@ function animate(time, entry, examno, step, sprites, override = false) {
     ) {
       //      initializeAnimation(entry, examno, step);
       stopAnimation(entry);
+      // const event = new Event("finishanimation");
+      // entry.target.dispatchEvent(event);
     } else {
       aminationId = window.requestAnimationFrame(() => {
         animate(time, entry, examno, step, sprites, override);

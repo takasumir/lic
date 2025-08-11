@@ -139,3 +139,38 @@ export const showBehavior = {
     }
   },
 };
+
+// Recorder
+// Recorder
+export class Recorder {
+  static RECORDER_OPTIONS = { mimeType: "video/webm" };
+
+  constructor(canvas, fps) {
+    this.stream = canvas.captureStream(fps);
+  }
+
+  start() {
+    this.recorder = new MediaRecorder(this.stream, Recorder.RECORDER_OPTIONS);
+    this.recorder.start();
+  }
+
+  stop() {
+    return new Promise((resolve) => {
+      this.recorder.addEventListener("dataavailable", (e) => {
+        let blob = e.data;
+        let url = URL.createObjectURL(blob);
+        resolve(url);
+      });
+
+      this.recorder.stop();
+    });
+  }
+
+  pause() {
+    this.recorder.pause();
+  }
+
+  resume() {
+    this.recorder.resume();
+  }
+}

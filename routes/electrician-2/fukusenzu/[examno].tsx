@@ -19,7 +19,7 @@ export default async function Fukusenzu(req: Request, ctx: RouteContext) {
         </title>
         <meta
           name="description"
-          content="第二種電気工事士技能試験の候補問題No.{props.params.examno}を題材として、}単線図から複線図を作成する方法を解説します。"
+          content={`第二種電気工事士技能試験の候補問題No.${ctx.params.examno}を題材として、単線図から複線図を作成する方法を解説します。`}
         />
       </Head>
       <header className="px-4 pt-16 pb-8 mx-auto bg-[#86efac]">
