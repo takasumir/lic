@@ -114,7 +114,7 @@ export function Kaisetsu({ step, prevStep, nextStep }) {
         <h2 class="font-bold text-lg">3路スイッチの1,2番同士を接続</h2>
         <div class="col-span-2 md:col-span-1 flex flex-col w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
           <p>
-            最後に3路スイッチ同士を接続します。お互いの1番と3番は、「1-1、3-3」と接続しても「1-3、3-1」のように接続しても同じ動作をするのでどちらでも問題ありません。ここでは図を見やすくするため「1-1、2-2」を接続しました。
+            最後に3路スイッチ同士を接続します。お互いの1番と3番は、「1-1、3-3」と接続しても「1-3、3-1」のように接続しても同じ動作をするのでどちらでも問題ありません。ここでは図を見やすくするため「1-1、3-3」を接続しました。
           </p>
         </div>
       </div>
