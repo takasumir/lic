@@ -59,7 +59,7 @@ export function FukusenzuApp(props) {
         key="sld.cvs"
         id="0"
         ref={canvas0}
-        style="width:100%; max-width:600px"
+        class="w-full max-w-[600px] m-auto"
         width="1200"
         height="800"
       ></canvas>
@@ -73,7 +73,7 @@ export function FukusenzuApp(props) {
         key="mld.cvs"
         id="1"
         ref={canvas1}
-        style="width:100%; max-width:600px"
+        class="w-full max-w-[600px] m-auto"
         width="1200"
         height="800"
         onClick={nextStep}
