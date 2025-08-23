@@ -66,7 +66,7 @@ export function Kaisetsu({ step, prevStep, nextStep }) {
         <div class="col-span-2 md:col-span-1 flex flex-col w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
           <p>電源の非接地側をコンセントとスイッチに接続します。</p>
           <p>
-            非接地側は、コンセントとスイッチに接続します。コンセントとスイッチ「イ」が同じ連用取付枠に付いているので、お互いを渡り線で接続します。
+            コンセントとスイッチ「イ」が同じ連用取付枠に付いているので、お互いを渡り線で接続します。
           </p>
         </div>
       </div>
