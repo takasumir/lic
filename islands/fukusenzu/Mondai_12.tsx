@@ -65,7 +65,7 @@ export function Kaisetsu({ step, prevStep, nextStep }) {
         <div class="col-span-2 md:col-span-1 flex flex-col w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
           <p>電源の非接地側をコンセントとスイッチに接続します。</p>
           <p>
-            非接地側は、コンセントとスイッチに接続します。コンセントとスイッチ「ロ」が同じ連用取付枠に付いているので、お互いを渡り線で接続します。
+            コンセントとスイッチ「ロ」が同じ連用取付枠に付いているので、お互いを渡り線で接続します。
           </p>
         </div>
       </div>
@@ -113,7 +113,7 @@ export function Kaisetsu({ step, prevStep, nextStep }) {
         <h2 class="font-bold text-lg">線の色を決定する</h2>
         <div class="col-span-2 md:col-span-1 flex flex-col w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
           <p>
-            決まっていない線の色を決めます。1つ目はジョイントボックスBからスイッチ「イ」に伸びた2本の線です。施工条件で電源から点滅器の非接地側電線には、すべて黒色を使用する、と指定されていますので、スイッチから引掛シーリングへの線が青色になります。
+            決まっていない線の色を決めます。1つ目はジョイントボックスBからスイッチ「イ」に伸びた2本の線です。施工条件で電源から点滅器の非接地側電線には、すべて黒色を使用する、と指定されていますので、スイッチから引掛シーリングへの線が赤色になります。
           </p>
           <p>
             2つ目はジョイントボックスBからスイッチ「ロ」側3本の線のうち、非接地側2本の線どちらかが赤になります。施工条件で電源からコンセントの非接地側電線は黒色と指定されているためスイッチからランプレセプタクル側が赤色になります。
